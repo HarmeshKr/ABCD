@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <label>Number</label>
+    <br />
+    <input type="number" id="txtNum" />
+    <br />
+    <button id="btnRoot">Calculate Root</button>
+    <br />
+    <span style="color:red;font-size:20px" id="spResult">  </span>
+
+    <script>
+        var btn = document.getElementById('btnRoot');
+        btn.onclick = GetRoot;
+
+
+        function GetRoot() {
+            var txt = document.getElementById('txtNum');
+            var span = document.getElementById('spResult');
+            var number = parseInt(txt.value);
+            var root = Math.sqrt(number);
+
+             span.innerText = root;
+           // span.innerText = "<h2>hello</h2>"
+        }
+
+
+        //---------------------------------------------------
+        // alert('hello');
+
+        function Display(x, y) {
+            var result = Math.pow(x, y);
+            var str = `I am going to calculate x power y.
+                The result is as follows:
+                ${result}`;
+
+            alert(str);
+        }
+        // Display(2, 5);
+    </script>
+
+</body>
+</html>

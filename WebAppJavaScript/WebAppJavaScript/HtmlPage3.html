@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <a href="#" id="lnk">Go to Home Page</a>
+    <br /><br />
+    <label>Ratings</label>
+    <input id="r" type="range" max="10" min="1" value="0" /><span id="sp"></span>
+
+    <br />
+    <br />
+    <label>Day</label>  <input type="radio" name="rd" value="DAY" />
+    <label>NIGHT</label><input type="radio" name="rd" value="NIGHT" />
+    <script>
+
+        var link = document.getElementById("lnk");
+        link.onclick = function () {
+            window.location = "HtmlPage2.html";
+        }
+        //--------------------------------------------
+        var slider = document.getElementById("r");
+        var span = document.getElementById("sp");
+
+        //slider.onchange = (e) => span.innerText = e.target.value;
+        slider.oninput = (e) => span.innerText = e.target.value;
+
+        //----------------
+        var radios = document.getElementsByName('rd');
+        radios[0].onchange = check;
+        radios[1].onchange = check;
+
+        function check(e) { alert(e.target.value); }
+    </script>
+</body>
+</html>

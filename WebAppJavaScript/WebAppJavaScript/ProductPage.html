@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <title></title>
+    <style>
+        #id{position:absolute;left:100px;}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        
+        var products = [
+            { title: 'Sparrow', price: 600, photo: 'Bird.jpg' },
+            { title: 'Eagle', price: 570, photo: 'Bird.jpg' },
+            { title: 'Parrot', price: 400, photo: 'Bird.jpg' },
+            { title: 'Peacock', price: 500, photo: 'Bird.jpg' }
+        ];
+
+        var box = document.getElementById('box');
+
+        var container, price, title,photo;
+        for (var i = 0; i < products.length; i++) {
+            container = document.createElement('div');
+            container.classList.add('container');
+
+            title = document.createElement('label');
+            title.innerText = products[i].title;
+
+            price = document.createElement('label');
+            price.innerText = products[i].price;
+
+            photo = document.createElement('img');
+            photo.setAttribute('src', products[i].photo);
+            photo.setAttribute('alt', products[i].photo);
+            photo.height = 150; photo.width = 250;
+            
+
+            title.setAttribute('class', 'title');
+            price.setAttribute('class', 'price');
+            photo.setAttribute('class', 'photo');         //photo.removeAttribute("class");
+
+
+            container.append(title);
+            container.append(price);
+            container.append(photo);
+
+            box.append(container);
+        }
+    </script>
+</body>
+</html>

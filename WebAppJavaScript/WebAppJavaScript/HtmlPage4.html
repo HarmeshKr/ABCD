@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script src="Scripts/JavaScript1.js"></script>
+    <script>
+
+        var p = [
+                    new Product(100, 'Eraser', 200, new Date(2020, 0, 20)),
+                    new Product(101, 'Notebook', 250, new Date(2010, 11, 10)),
+                    new Product(102, 'Colorbook', 350, new Date(2021, 5, 11))
+                ];
+
+        var store = new Store();
+        store.addProduct(p[0]);
+        store.addProduct(p[1]);
+        store.addProduct(p[2]);
+
+
+        var a = new Product(106, 'Notebook123', 250, new Date(2010, 11, 10));
+        var b = new Product(107, 'Colorbook345', 350, new Date(2021, 5, 11));
+
+        store.addProduct2(a, b);
+
+        store.displayProducts();
+        console.warn("----------------------------------------");
+
+        var result = store.deleteProduct(102);
+        if (result)
+            console.log('Deleted.......');
+        else
+            console.log('Not Found..');
+
+        store.displayProducts();
+
+
+        var json = JSON.stringify(p);     //convert javascript object to json string
+        alert(json);
+
+        var ary = JSON.parse(json);  // convert json string to javascript object
+        var b = 0;
+
+
+        var book = new Book(200, 'C#', 450);
+        var str = book.display();
+        //alert(str);
+
+        var temp = book.display;
+        alert(temp());
+
+        var h = { id: 1010, title: 'QWERTY', price: 4500 };
+
+        temp.call(h);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3 id="a"></h3>
+    <br/>
+    <h3 id="b"></h3>
+    <script>
+
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+
+        var str = "once_upon_a_time_there_was_A_lion";
+
+        //var result=str.length;
+        //var result = str.substr(3,5);
+        //var result = str.substring(3,11);
+        //var result = str.replace('a','@');
+        //var result = str.replace(/a/gi, '@');
+
+        //var result = str.split('_');
+        //result = result.join('=');
+
+       // var result = str.indexOf('e');
+       // result = str.indexOf('e', result + 1);
+
+       // var result = str.includes('time');
+
+        var result = str.lastIndexOf('e');
+        result = str.lastIndexOf('e', result - 1);
+        a.innerText = str;
+        b.innerText = result;
+    </script>
+</body>
+</html>

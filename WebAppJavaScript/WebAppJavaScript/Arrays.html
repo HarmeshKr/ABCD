@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var ary = new Array(10, 20, 12, 43, 45, 65);
+        var ary2 = new Array(10, 'Book', 340.43, 'Car', true);
+        var colors = ["red", "green", "blue"];
+        /*
+        for (var c = 0; c < colors.length; c++) {
+            console.log(colors[c]);
+        }
+        console.log("-------------------------");
+        for (var a of colors) {
+            console.log(a);
+        }
+        console.warn("-------------------------");
+        for (var b in colors) {
+            console.log(`${b}     ${colors[b]}`)
+        }*/
+
+        var numbers = [10, 20, 56, 87, 99, 67, 56, 98, 100, 10, 43];
+
+        //numbers.push(1000);
+        //var p=numbers.shift();
+        //numbers.unshift(999,6700,1200);
+
+        //numbers.splice(2, 3);  --remove
+        //numbers.splice(2, 3, 111, 222, 333);
+
+        //var data = numbers.slice(3, 7);
+
+        //numbers.indexOf
+        //numbers.lastIndexOf
+
+        var result=numbers.filter(filterN);
+        //var result = numbers.filter((v, i) => { return v < 70; }  );
+        var filterN = true;
+        //var result = numbers.filter((v, i) => v < 70);
+
+        console.log(numbers);
+
+        function filterN(v, i) {
+            return v < 70;
+        }
+
+        var l = 10;
+    </script>
+
+</body>
+</html>
